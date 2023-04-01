@@ -3,7 +3,7 @@ import Product from './Product';
 
 type Props = {
   // products: Products[]
-  products: Product[]
+  products: any[]
 }
 
 const BestSellerList = ({ products }: Props) => {

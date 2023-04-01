@@ -18,12 +18,12 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <body>
+      <body className="layout">
 
         <ThemeProvider>
 
           <Head>
-            <title>JS Mastery Store</title>
+            <title>DC Store</title>
           </Head>
           <header>
             <Navbar />

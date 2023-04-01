@@ -10,7 +10,9 @@ const ImageProductCard = ({ image }: any) => {
     return (
         <div>
             <div className="image-container">
+
                 <img src={urlFor(image && image[index]).url()} className="product-detail-image" />
+          
             </div>
             <div className="small-images-container">
                 {image?.map((item: any, i: number) => (

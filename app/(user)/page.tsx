@@ -16,21 +16,21 @@ const productsQuery = groq`*[_type == "product"]`
 export const revalidate = 30; // revalidate this page every 60 seconds
 
 export default function Home() {
-  const {         
-    showCart,
-    setShowCart,
-    cartItems,
-    totalPrice,
-    totalQuantities,
-    qty,
-    incQty,
-    decQty,
-    onAdd,
-    toggleCartItemQuanitity,
-    onRemove,
-    setCartItems,
-    setTotalPrice,
-    setTotalQuantities  } = useGlobalContext();
+  // const {         
+  //   showCart,
+  //   setShowCart,
+  //   cartItems,
+  //   totalPrice,
+  //   totalQuantities,
+  //   qty,
+  //   incQty,
+  //   decQty,
+  //   onAdd,
+  //   toggleCartItemQuanitity,
+  //   onRemove,
+  //   setCartItems,
+  //   setTotalPrice,
+  //   setTotalQuantities  } = useGlobalContext();
 
   // const { userId, setUserId } = useGlobalContext();
   // useEffect(() => {
