@@ -1,0 +1,6 @@
+.studio-navbar {
+    display: flex;
+    flex-direction: row;
+    /* flex items-center justify-between p-5 */
+
+}
