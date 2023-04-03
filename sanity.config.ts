@@ -1,6 +1,7 @@
 import { DefaultDocument, defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
-import { visionTool } from '@sanity/vision'
+
+// import { visionTool } from '@sanity/vision'
 
 import { schemaTypes } from './schemas'
 
@@ -12,8 +13,8 @@ import { getDefaultDocumentNode } from './structure'
 export default defineConfig({
   basePath: '/studio',
 
-  name: 'devs_stories_Content_Studio',
-  title: 'Devs Stories Content Studio',
+  name: 'Ecommerce_Content_Studio',
+  title: 'Ecommerce Content Studio',
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || '',
@@ -22,7 +23,7 @@ export default defineConfig({
     deskTool({
       defaultDocumentNode: getDefaultDocumentNode
     }), 
-    visionTool()
+    // visionTool()
   ],
 
   schema: {

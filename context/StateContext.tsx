@@ -1,8 +1,10 @@
 "use client"
-import { toast } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 import { createContext, useContext, useState, Dispatch, SetStateAction } from 'react';
+
+const notify = () => toast('Here is your toast.');
 
 interface ContextProps {
   showCart: boolean;
@@ -74,7 +76,10 @@ export const ThemeProvider = ({
       setCartItems([...cartItems, { ...product }]);
     }
 
-    toast.success(`${qty} ${product.name} added to the cart.`);
+    console.log('added to the cart.');
+    toast.success('Successfully created!');
+
+    // toast.success(`${qty} ${product.name} added to the cart.`);
   }
 
   const onRemove = (product: { _id: string }) => {

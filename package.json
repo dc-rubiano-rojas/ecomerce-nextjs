@@ -12,9 +12,11 @@
     "@heroicons/react": "^2.0.17",
     "@reduxjs/toolkit": "^1.9.3",
     "@sanity/vision": "^3.8.2",
+    "@stripe/stripe-js": "^1.52.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
+    "canvas-confetti": "^1.6.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
@@ -25,6 +27,10 @@
     "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "sanity-plugin-iframe-pane": "^2.3.0",
+    "stripe": "^11.17.0",
     "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.6.0"
   }
 }

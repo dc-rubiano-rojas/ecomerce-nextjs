@@ -1,9 +1,9 @@
 'use client';
 
-import image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
-import AddToCartBuyNowButtons from './AddToCartBuyNowButtons'
+import toast, { Toaster } from 'react-hot-toast';
+
 import ImageProductCard from './ImageProductCard'
 import Product from './Product'
 
@@ -13,10 +13,18 @@ import { useGlobalContext } from '../context/StateContext'
 const ProductDetails = ({ name, details, price, products, image, product }: any) => {
     const { decQty, incQty, qty, onAdd, setShowCart } = useGlobalContext();
 
-    // const handleBuyNow = () => {
-    //     // onAdd(product, qty);
-    //     setShowCart(true);
-    // }
+    const handleBuyNow = () => {
+        onAdd(product, qty);
+        setShowCart(true);
+    }
+
+    // TODO: ADD TOAST DO NOT WORK
+    const handleAddToCart = (product: Product, qt: number) => {
+        onAdd(product, qty);
+        console.log('ENTRA AL ONADD para el toast');
+        
+        toast.success('Successfully created!');
+    }
 
     return (
         <div>
@@ -50,7 +58,10 @@ const ProductDetails = ({ name, details, price, products, image, product }: any)
                         </p>
                     </div>
 
-                    <AddToCartBuyNowButtons product={product} />
+                    <div className="buttons">
+                        <button type="button" className="add-to-cart" onClick={() => handleAddToCart(product, qty)}>Add to Cart</button>
+                        <button type="button" className="buy-now" onClick={handleBuyNow}>Buy Now</button>
+                    </div>
 
                 </div>
             </div>
